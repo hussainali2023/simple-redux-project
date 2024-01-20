@@ -20,11 +20,10 @@ import { addToCart, removeFromCart, removeOneFromCart } from '@/redux/features/c
 export default function Cart() {
   //! Dummy data
 
-const {products} = useAppSelector((state) => state.cart)
+const {products, total} = useAppSelector((state) => state.cart)
 
 const dispatch = useAppDispatch()
 
-  const total = 0;
 
   //! **
 
