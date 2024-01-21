@@ -6,14 +6,14 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Switch } from '@/components/ui/switch';
 import { Textarea } from '@/components/ui/textarea';
 import { useAppSelector } from '@/redux/hook';
+import { IProduct } from '@/types/globalTypes';
 
 import { useState } from 'react';
 
 export default function Checkout() {
   const [scheduled, setScheduled] = useState<boolean>(false);
 
-const {products} = useAppSelector((state) => state.cart)
-
+  const { products } = useAppSelector((state) => state.cart);
 
   return (
     <div className="flex justify-center items-center h-[calc(100vh-80px)] gap-10 text-primary">
